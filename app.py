@@ -7,6 +7,42 @@ st.set_page_config(
     page_icon="🧠",
     layout="centered"
 )
+# ---------------- FIX TEXT VISIBILITY ----------------
+st.markdown(
+    """
+    <style>
+    /* Main text */
+    body, p, span, div, label {
+        color: #EAEAEA !important;
+    }
+
+    /* Input boxes */
+    input, textarea {
+        color: #000000 !important;
+        background-color: #FFFFFF !important;
+    }
+
+    /* Selectbox */
+    .stSelectbox div[data-baseweb="select"] > div {
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+    }
+
+    /* Buttons */
+    .stButton button {
+        background-color: #2E86C1;
+        color: white;
+        border-radius: 8px;
+    }
+
+    /* Expander text */
+    details summary {
+        color: #EAEAEA !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ---------------- SESSION INIT ----------------
 if "started" not in st.session_state:
